@@ -35,15 +35,6 @@
       "location": "pune",
       "mobileno": "9845211212",
       "id": 4
-    },
-    {
-      "email": "subro@gmail.com",
-      "password": "123456",
-      "firstname": "subro",
-      "lastname": "pattanaik",
-      "location": "pune",
-      "mobileno": "9845211212",
-      "id": 5
     }
   ]
 }
