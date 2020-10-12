@@ -1,0 +1,49 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "subro@gmail.com",
+      "password": "123456",
+      "firstname": "subro",
+      "lastname": "pattanaik",
+      "location": "pune",
+      "mobileno": "9845211212"
+    },
+    {
+      "id": 2,
+      "email": "raja@gmail.com",
+      "password": "123456",
+      "firstname": "raja",
+      "lastname": "G",
+      "location": "pune",
+      "mobileno": "9845211212"
+    },
+    {
+      "email": "llol@asd.hssdf",
+      "password": "asdasf",
+      "firstname": "asd",
+      "lastname": "asd",
+      "Location": "asd",
+      "mobileno": "2313123123",
+      "id": 3
+    },
+    {
+      "email": "subro@gmail.com",
+      "password": "123456",
+      "firstname": "subro",
+      "lastname": "pattanaik",
+      "location": "pune",
+      "mobileno": "9845211212",
+      "id": 4
+    },
+    {
+      "email": "subro@gmail.com",
+      "password": "123456",
+      "firstname": "subro",
+      "lastname": "pattanaik",
+      "location": "pune",
+      "mobileno": "9845211212",
+      "id": 5
+    }
+  ]
+}

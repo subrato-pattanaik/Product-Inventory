@@ -1,0 +1,25 @@
+.navbrand {
+  margin-left: 35px;
+  margin-top: -18px;
+}
+
+.brandfont {
+  font-size: 40px;
+}
+
+.nav-item .dropdown-menu {
+  background: #343a40;
+}
+
+.nav-item .dropdown-item {
+  color: #ffffff;
+}
+
+.nav-item .dropdown-item:hover,
+.nav-item .dropdown-item:active {
+  color: #ffc107;
+  background: none;
+}
+.nav-item .dropdown-item:visited {
+  background-color: #343a40 !important;
+}
