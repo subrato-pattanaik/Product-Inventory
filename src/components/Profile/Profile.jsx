@@ -19,7 +19,7 @@ function Profile() {
         >
           <Row noGutters>
             <Col>
-              <Container className="bg-light my-3">
+              <Container className="bg-light my-5">
                 <Row className="mx-auto">
                   <Col>
                     <Row>
