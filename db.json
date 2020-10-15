@@ -36,5 +36,79 @@
       "mobileno": "9845211212",
       "id": 4
     }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "Lenovo Desktop",
+      "productDesc": "Lenovo 16GB Ram 2TB harddisk i5 7th Generation",
+      "manufacturer": "Legend Holdings",
+      "price": 45000,
+      "quantity": 100
+    },
+    {
+      "id": 2,
+      "productName": "Mi Note 9 pro",
+      "productDesc": "A great smart phone with 8GB Ram, 128GB internal memory and many more feature.",
+      "manufacturer": "Xiaomi Inc.",
+      "price": 18000,
+      "quantity": 80
+    },
+    {
+      "id": 3,
+      "productName": "NIKON D5300 DSLR Camera",
+      "productDesc": "A DSLR camera with 18-55 mm and 70-300 mm Dual Lens Kit",
+      "manufacturer": "Nikon Corporation",
+      "price": 42999,
+      "quantity": 100
+    },
+    {
+      "id": 4,
+      "productName": "Samsung Refrigerator",
+      "productDesc": "Samsung 415 litres 3 Star Double Door Refrigerator, Easy Clean Steel RT42T546ESL/TL",
+      "manufacturer": "Samsung fridge manufacturer",
+      "price": 46490,
+      "quantity": 100
+    },
+    {
+      "id": 5,
+      "productName": "LG Inverter Split AC",
+      "productDesc": "LG 1.5 Ton 5 Star Inverter Split AC (Copper, LS-Q18YNZA, Convertible 4-in-1 Cooling, White)",
+      "manufacturer": "LG Electronics India ",
+      "price": 42990,
+      "quantity": 100
+    },
+    {
+      "productName": "",
+      "productDesc": "",
+      "manufacturer": "",
+      "price": "",
+      "quantity": "",
+      "id": 6
+    },
+    {
+      "productName": "",
+      "productDesc": "",
+      "manufacturer": "",
+      "price": "",
+      "quantity": "",
+      "id": 7
+    },
+    {
+      "productName": "",
+      "productDesc": "",
+      "manufacturer": "",
+      "price": "",
+      "quantity": "",
+      "id": 8
+    },
+    {
+      "productName": "sdfsdf",
+      "productDesc": "asdf",
+      "manufacturer": "sdfsdf",
+      "price": "12",
+      "quantity": "21",
+      "id": 9
+    }
   ]
 }

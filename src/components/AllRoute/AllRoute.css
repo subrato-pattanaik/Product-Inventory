@@ -1,13 +1,13 @@
 .loader {
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  position: fixed;
+  top: 47%;
+  left: 46%;
   transform: translate(-50%, -50%);
-  border: 4px solid #f3f3f3;
+  border: 5px solid #f3f3f3;
   box-sizing: border-box;
   border-radius: 50%;
-  border-top: 4px solid #ffc107;
-  border-left: 4px solid #ffc107;
+  border-top: 5px solid #ffc107;
+  border-left: 5px solid #ffc107;
   width: 60px;
   height: 60px;
   animation: spin 1s linear infinite;

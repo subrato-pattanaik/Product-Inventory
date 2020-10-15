@@ -31,12 +31,11 @@ function ProfileForm() {
   return (
     <Form autoComplete="off">
       <Form.Row>
-        <Form.Group as={Col} className="mr-2">
+        <Form.Group as={Col} className="mr-4">
           <Form.Label>
             Email<span className="text-danger">*</span>
           </Form.Label>
           <Form.Control
-            className="rounded-pill"
             type="email"
             name="email"
             ref={register}
@@ -54,7 +53,6 @@ function ProfileForm() {
             Password<span className="text-danger">*</span>
           </Form.Label>
           <Form.Control
-            className="rounded-pill"
             type="password"
             name="password"
             ref={register}
@@ -68,16 +66,11 @@ function ProfileForm() {
         </Form.Group>
       </Form.Row>
       <Form.Row>
-        <Form.Group as={Col} className="mr-2">
+        <Form.Group as={Col} className="mr-4">
           <Form.Label>
             First Name<span className="text-danger">*</span>
           </Form.Label>
-          <Form.Control
-            className="rounded-pill"
-            name="firstname"
-            ref={register}
-            disabled="true"
-          />
+          <Form.Control name="firstname" ref={register} disabled="true" />
           {errors.firstname && (
             <div className="small lead text-danger  mb-2">
               {errors.firstname.message}
@@ -89,12 +82,7 @@ function ProfileForm() {
           <Form.Label>
             Last Name<span className="text-danger">*</span>
           </Form.Label>
-          <Form.Control
-            className="rounded-pill"
-            name="lastname"
-            ref={register}
-            disabled="true"
-          />
+          <Form.Control name="lastname" ref={register} disabled="true" />
           {errors.lastname && (
             <div className="small lead text-danger  mb-2">
               {errors.lastname.message}
@@ -103,26 +91,16 @@ function ProfileForm() {
         </Form.Group>
       </Form.Row>
       <Form.Row className="mb-3">
-        <Form.Group as={Col} className="mr-2">
+        <Form.Group as={Col} className="mr-4">
           <Form.Label>Location</Form.Label>
-          <Form.Control
-            className="rounded-pill"
-            name="location"
-            ref={register}
-            disabled="true"
-          />
+          <Form.Control name="location" ref={register} disabled="true" />
         </Form.Group>
 
         <Form.Group as={Col}>
           <Form.Label>
             Mobile No<span className="text-danger">*</span>
           </Form.Label>
-          <Form.Control
-            className="rounded-pill"
-            name="mobileno"
-            ref={register}
-            disabled="true"
-          />
+          <Form.Control name="mobileno" ref={register} disabled="true" />
           {errors.mobileno && (
             <div className="small lead text-danger  mb-2">
               {errors.mobileno.message}

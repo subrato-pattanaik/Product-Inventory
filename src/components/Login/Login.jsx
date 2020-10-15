@@ -73,6 +73,13 @@ function Login() {
                         </Alert.Heading>
                       </Alert>
                     )}
+                    {!!location?.state?.addProduct && (
+                      <Alert variant="danger">
+                        <Alert.Heading>
+                          Login First then add the product
+                        </Alert.Heading>
+                      </Alert>
+                    )}
 
                     <h3 className="display-4 text-warning text-center font-weight-bold">
                       PI Login
