@@ -39,36 +39,40 @@
   ],
   "products": [
     {
-      "id": 1,
       "productName": "Lenovo Desktop",
       "productDesc": "Lenovo 16GB Ram 2TB harddisk i5 7th Generation",
       "manufacturer": "Legend Holdings",
-      "price": 45000,
-      "quantity": 100
+      "price": "45000",
+      "quantity": "100",
+      "select": false,
+      "id": 1
     },
     {
-      "id": 2,
-      "productName": "Mi Note 9 pro",
+      "productName": "Mi Note 9 pro 2 ",
       "productDesc": "A great smart phone with 8GB Ram, 128GB internal memory and many more feature.",
       "manufacturer": "Xiaomi Inc.",
-      "price": 18000,
-      "quantity": 80
+      "price": "18000",
+      "quantity": "80",
+      "select": false,
+      "id": 2
     },
     {
-      "id": 3,
       "productName": "NIKON D5300 DSLR Camera",
       "productDesc": "A DSLR camera with 18-55 mm and 70-300 mm Dual Lens Kit",
       "manufacturer": "Nikon Corporation",
-      "price": 42999,
-      "quantity": 100
+      "price": "42999",
+      "quantity": "100",
+      "select": false,
+      "id": 3
     },
     {
-      "id": 4,
       "productName": "Samsung Refrigerator",
       "productDesc": "Samsung 415 litres 3 Star Double Door Refrigerator, Easy Clean Steel RT42T546ESL/TL",
       "manufacturer": "Samsung fridge manufacturer",
-      "price": 46490,
-      "quantity": 100
+      "price": "46490",
+      "quantity": "100",
+      "select": false,
+      "id": 4
     },
     {
       "id": 5,
@@ -79,11 +83,12 @@
       "quantity": 100
     },
     {
-      "productName": "sdfsdf",
+      "productName": "11sdfsdf1f1",
       "productDesc": "asdf",
       "manufacturer": "sdfsdf",
-      "price": "12",
+      "price": "1255",
       "quantity": "21",
+      "select": false,
       "id": 9
     }
   ]

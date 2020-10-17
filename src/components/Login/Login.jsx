@@ -80,6 +80,13 @@ function Login() {
                         </Alert.Heading>
                       </Alert>
                     )}
+                    {!!location?.state?.editProduct && (
+                      <Alert variant="danger">
+                        <Alert.Heading>
+                          Login First then edit the product
+                        </Alert.Heading>
+                      </Alert>
+                    )}
 
                     <h3 className="display-4 text-warning text-center font-weight-bold">
                       PI Login

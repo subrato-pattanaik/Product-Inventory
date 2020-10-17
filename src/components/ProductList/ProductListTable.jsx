@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Container, Table, Row, Col, Button } from "react-bootstrap";
+
 import axios from "axios";
 
+import { Link, withRouter } from "react-router-dom";
 function ProductListTable({ allSelected, setAllSelected }) {
   const [nameChecked] = useState(true);
   const [descChecked, setdescChecked] = useState(true);
@@ -11,9 +13,12 @@ function ProductListTable({ allSelected, setAllSelected }) {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:4000/products").then((res) => {
-      setProducts(res.data);
-    });
+    async function fetchData() {
+      await axios.get("http://localhost:4000/products").then((res) => {
+        setProducts(res.data);
+      });
+    }
+    fetchData();
   }, []);
 
   const onDelete = () => {
@@ -34,6 +39,9 @@ function ProductListTable({ allSelected, setAllSelected }) {
       setProducts(p);
     } else alert("No product is selected for deleting");
   };
+
+  // const navigation = useHistory();
+
   return (
     <Container>
       <Row>
@@ -148,6 +156,16 @@ function ProductListTable({ allSelected, setAllSelected }) {
                   {manChecked && <td>{product.manufacturer}</td>}
                   {prChecked && <td>{product.price}</td>}
                   {qtyChecked && <td>{product.quantity}</td>}
+                  <td>
+                    <Link
+                      to={{
+                        pathname: "/editProduct",
+                        state: { pid: product.id },
+                      }}
+                    >
+                      <Button variant="success">Edit</Button>
+                    </Link>
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -158,4 +176,4 @@ function ProductListTable({ allSelected, setAllSelected }) {
   );
 }
 
-export default ProductListTable;
+export default withRouter(ProductListTable);
