@@ -13,7 +13,7 @@ const TopViewProduct = React.lazy(() =>
 );
 const Signup = React.lazy(() => import("../Signup/Signup"));
 const Profile = React.lazy(() => import("../Profile/Profile"));
-
+const EditProduct = React.lazy(() => import("../EditProduct/EditProduct"));
 function AllRoute() {
   const [user, setUser] = useState(null);
   return (
@@ -35,6 +35,7 @@ function AllRoute() {
             <Route path="/Login" component={Login} />
             <Route path="/Signup" component={Signup} />
             <Route path="/Profile" component={Profile} />
+            <Route path="/editProduct" component={EditProduct} />
           </Switch>
         </UserContextAPI.Provider>
       </Suspense>
