@@ -16,6 +16,7 @@ function AddProductForm() {
   let navigation = useHistory();
   const onSubmit = (formData) => {
     if (user && validated) {
+      formData.select = false;
       axios.post("http://localhost:4000/products", formData);
       setIsDirty(false);
       navigation.push({
@@ -32,6 +33,7 @@ function AddProductForm() {
       }
       setValidated(true);
     }
+    setValidated(true);
   };
 
   return (
