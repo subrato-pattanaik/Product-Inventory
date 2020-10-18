@@ -1,9 +1,12 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
+import TopViewProduct from "../Chart/TopViewProduct";
 function AboutProductList() {
   return (
     <Container className="pt-3">
+      <div className="mb-5">
+        <TopViewProduct />
+      </div>
       <div className="text-center">
         <h4 className="mb-n2 display-6">About Product List</h4>
         <hr className="mb-4 bg-warning" />
@@ -13,7 +16,6 @@ function AboutProductList() {
           <p>You can edit, view and delete the product easily</p>
         </div>
       </div>
-      <div></div>
     </Container>
   );
 }
