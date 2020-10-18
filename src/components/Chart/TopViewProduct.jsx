@@ -15,7 +15,7 @@ const data = {
 function TopViewProduct() {
   return (
     <div>
-      <h4>Top 3 Product</h4>
+      <h4>Top 3 Products</h4>
       <hr className="bg-warning mb-3" />
       <Doughnut data={data} width={20} height={20} />
     </div>
