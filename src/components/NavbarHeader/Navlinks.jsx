@@ -32,14 +32,6 @@ function Navlinks() {
           Add Product
         </NavDropdown.Item>
       </NavDropdown>
-      <Nav.Link
-        as={NavLink}
-        to="/topViewProduct"
-        activeClassName="active"
-        activeStyle={{ color: "orange" }}
-      >
-        Top View Product
-      </Nav.Link>
     </Nav>
   );
 }
