@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { Container, Table, Row, Col, Button } from "react-bootstrap";
 
 import axios from "axios";
-
 import { Link, withRouter } from "react-router-dom";
+
 function ProductListTable({ allSelected, setAllSelected }) {
   const [nameChecked] = useState(true);
   const [descChecked, setdescChecked] = useState(true);
@@ -151,7 +151,18 @@ function ProductListTable({ allSelected, setAllSelected }) {
                       }}
                     />
                   </td>
-                  {nameChecked && <td>{product.productName}</td>}
+                  {nameChecked && (
+                    <td>
+                      <Link
+                        to={{
+                          pathname: "/viewProduct",
+                          state: { pid: product.id },
+                        }}
+                      >
+                        {product.productName}
+                      </Link>
+                    </td>
+                  )}
                   {descChecked && <td>{product.productDesc}</td>}
                   {manChecked && <td>{product.manufacturer}</td>}
                   {prChecked && <td>{product.price}</td>}
