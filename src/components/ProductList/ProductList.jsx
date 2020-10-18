@@ -11,10 +11,10 @@ function ProductList() {
   return (
     <Container fluid className="mt-4 mb-5">
       <Row>
-        <Col sm={2} className="border-right bg-light">
+        <Col md={3} sm={3} className="border-right bg-light">
           <AboutProductList />
         </Col>
-        <Col sm={10}>
+        <Col md={9} sm={9}>
           <Container>
             <Row className="mt-2">
               <Col sm={4}>
