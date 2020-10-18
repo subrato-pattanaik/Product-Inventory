@@ -3,7 +3,8 @@ import { Container, Table, Row, Col, Button } from "react-bootstrap";
 
 import axios from "axios";
 import { Link, withRouter, useHistory } from "react-router-dom";
-import { useFormContext } from "react-hook-form";
+
+import { UserContextAPI } from "../ContextAPI/UserContextAPI";
 
 function ProductListTable({ allSelected, setAllSelected }) {
   const [nameChecked] = useState(true);
@@ -12,7 +13,7 @@ function ProductListTable({ allSelected, setAllSelected }) {
   const [prChecked, setprChecked] = useState(true);
   const [qtyChecked, setqtyChecked] = useState(true);
   const [products, setProducts] = useState([]);
-  const { user } = useContext(useFormContext);
+  const { user } = useContext(UserContextAPI);
   useEffect(() => {
     async function fetchData() {
       await axios.get("http://localhost:4000/products").then((res) => {

@@ -4,6 +4,7 @@ import { UserContextAPI } from "../ContextAPI/UserContextAPI";
 import EditProductForm from "./EditProductForm";
 import { useHistory, withRouter } from "react-router-dom";
 import AboutEditProduct from "./AboutEditProduct";
+
 function EditProduct() {
   const { user } = useContext(UserContextAPI);
   let navigation = useHistory();
@@ -11,7 +12,12 @@ function EditProduct() {
   return (
     <>
       {!user ? (
-        <>{navigation.push("/Login")}</>
+        <>
+          {navigation.push({
+            pathname: "./Login",
+            state: { editProduct: "edit" },
+          })}
+        </>
       ) : (
         <Container fluid className="mt-4 mb-5">
           <Row>
