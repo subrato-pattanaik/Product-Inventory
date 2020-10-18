@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Container, Table, Row, Col, Button } from "react-bootstrap";
 
 import axios from "axios";
-import { Link, withRouter } from "react-router-dom";
+import { Link, withRouter, useHistory } from "react-router-dom";
+import { useFormContext } from "react-hook-form";
 
 function ProductListTable({ allSelected, setAllSelected }) {
   const [nameChecked] = useState(true);
@@ -11,7 +12,7 @@ function ProductListTable({ allSelected, setAllSelected }) {
   const [prChecked, setprChecked] = useState(true);
   const [qtyChecked, setqtyChecked] = useState(true);
   const [products, setProducts] = useState([]);
-
+  const { user } = useContext(useFormContext);
   useEffect(() => {
     async function fetchData() {
       await axios.get("http://localhost:4000/products").then((res) => {
@@ -21,23 +22,32 @@ function ProductListTable({ allSelected, setAllSelected }) {
     fetchData();
   }, []);
 
-  const onDelete = () => {
-    let arraysId = [];
-    products.forEach((element) => {
-      if (element.select) arraysId.push(element.id);
-    });
+  let navigation = useHistory();
 
-    if (
-      arraysId.length > 0 &&
-      window.confirm("Are you sure for deleting the selected product?")
-    ) {
-      let p = [];
-      arraysId.forEach(async (element) => {
-        await axios.delete(`http://localhost:4000/products/${element}`);
+  const onDelete = () => {
+    if (user) {
+      let arraysId = [];
+      products.forEach((element) => {
+        if (element.select) arraysId.push(element.id);
       });
-      p = products.filter((prod) => !arraysId.includes(prod.id));
-      setProducts(p);
-    } else alert("No product is selected for deleting");
+
+      if (
+        arraysId.length > 0 &&
+        window.confirm("Are you sure for deleting the selected product?")
+      ) {
+        let p = [];
+        arraysId.forEach(async (element) => {
+          await axios.delete(`http://localhost:4000/products/${element}`);
+        });
+        p = products.filter((prod) => !arraysId.includes(prod.id));
+        setProducts(p);
+      } else alert("No product is selected for deleting");
+    } else {
+      navigation.push({
+        pathname: "./Login",
+        state: { deleteproduct: "delete" },
+      });
+    }
   };
 
   // const navigation = useHistory();
