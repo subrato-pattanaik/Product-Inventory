@@ -1,6 +1,5 @@
 import React from "react";
 import { Carousel, Container } from "react-bootstrap";
-import { withRouter } from "react-router-dom";
 import EditProduct from "../../images/EditProduct.jpg";
 import NewProduct from "../../images/NewProduct.jpg";
 import PI from "../../images/PI.jpg";
@@ -31,4 +30,4 @@ function About() {
   );
 }
 
-export default withRouter(About);
+export default About;
