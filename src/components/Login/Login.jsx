@@ -127,8 +127,8 @@ function Login() {
                         <Form.Control
                           className="rounded-pill"
                           type="password"
-                          placeholder="Password"
                           name="password"
+                          placeholder="Password"
                           ref={register}
                         />
                         {errors.password && (

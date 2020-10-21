@@ -1,6 +1,6 @@
 import React from "react";
 import { NavDropdown, Nav } from "react-bootstrap";
-import { NavLink, withRouter } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 function Navlinks() {
   return (
@@ -36,4 +36,4 @@ function Navlinks() {
   );
 }
 
-export default withRouter(Navlinks);
+export default Navlinks;

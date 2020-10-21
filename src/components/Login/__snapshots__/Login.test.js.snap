@@ -1,0 +1,217 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component Mount Test  renders correctly 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "POP",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 1,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "pathname": "/",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Login>
+      <Container
+        className="p-0"
+        fluid={true}
+      >
+        <div
+          className="p-0 container-fluid"
+        >
+          <Row
+            noGutters={true}
+          >
+            <div
+              className="row no-gutters"
+            >
+              <Col
+                lg={6}
+                md={6}
+                style={
+                  Object {
+                    "backgroundImage": "url(image1.jpg)",
+                    "backgroundPosition": "center center",
+                    "backgroundSize": "cover",
+                    "minHeight": "89vh",
+                  }
+                }
+                xs={12}
+              >
+                <div
+                  className="col-lg-6 col-md-6 col-12"
+                  style={
+                    Object {
+                      "backgroundImage": "url(image1.jpg)",
+                      "backgroundPosition": "center center",
+                      "backgroundSize": "cover",
+                      "minHeight": "89vh",
+                    }
+                  }
+                />
+              </Col>
+              <Col
+                lg={6}
+                md={6}
+                xs={12}
+              >
+                <div
+                  className="col-lg-6 col-md-6 col-12"
+                >
+                  <Container
+                    className="d-flex login bg-light align-items-center"
+                    fluid={false}
+                  >
+                    <div
+                      className="d-flex login bg-light align-items-center container"
+                    >
+                      <Row
+                        className="mx-auto justify-content-center"
+                        noGutters={false}
+                      >
+                        <div
+                          className="mx-auto justify-content-center row"
+                        >
+                          <Col
+                            md={10}
+                            xs={10}
+                          >
+                            <div
+                              className="col-md-10 col-10"
+                            >
+                              <h3
+                                className="display-4 text-warning text-center font-weight-bold"
+                              >
+                                PI Login
+                              </h3>
+                              <p
+                                className="text-muted text-center mb-4"
+                              >
+                                Lets do shopping from here with best deals
+                              </p>
+                              <Form
+                                autoComplete="off"
+                                inline={false}
+                                onSubmit={[Function]}
+                              >
+                                <form
+                                  autoComplete="off"
+                                  className=""
+                                  onSubmit={[Function]}
+                                >
+                                  <FormGroup
+                                    className="mb-4"
+                                    controlId="formBasicEmail"
+                                  >
+                                    <div
+                                      className="mb-4 form-group"
+                                    >
+                                      <FormLabel
+                                        className="small lead"
+                                        column={false}
+                                        srOnly={false}
+                                      >
+                                        <label
+                                          className="small lead form-label"
+                                          htmlFor="formBasicEmail"
+                                        >
+                                          Email address
+                                        </label>
+                                      </FormLabel>
+                                      <FormControl
+                                        className="rounded-pill"
+                                        name="email"
+                                        placeholder="Enter email"
+                                        type="email"
+                                      >
+                                        <input
+                                          className="rounded-pill form-control"
+                                          id="formBasicEmail"
+                                          name="email"
+                                          placeholder="Enter email"
+                                          type="email"
+                                        />
+                                      </FormControl>
+                                    </div>
+                                  </FormGroup>
+                                  <FormGroup
+                                    className="mb-4"
+                                    controlId="formBasicPassword"
+                                  >
+                                    <div
+                                      className="mb-4 form-group"
+                                    >
+                                      <FormLabel
+                                        className="small lead"
+                                        column={false}
+                                        srOnly={false}
+                                      >
+                                        <label
+                                          className="small lead form-label"
+                                          htmlFor="formBasicPassword"
+                                        >
+                                          Password
+                                        </label>
+                                      </FormLabel>
+                                      <FormControl
+                                        className="rounded-pill"
+                                        name="password"
+                                        placeholder="Password"
+                                        type="password"
+                                      >
+                                        <input
+                                          className="rounded-pill form-control"
+                                          id="formBasicPassword"
+                                          name="password"
+                                          placeholder="Password"
+                                          type="password"
+                                        />
+                                      </FormControl>
+                                    </div>
+                                  </FormGroup>
+                                  <Button
+                                    active={false}
+                                    className="btn-block text-white border-0 rounded-pill mb-4"
+                                    disabled={false}
+                                    type="submit"
+                                    variant="warning"
+                                  >
+                                    <button
+                                      className="btn-block text-white border-0 rounded-pill mb-4 btn btn-warning"
+                                      disabled={false}
+                                      type="submit"
+                                    >
+                                      Login here
+                                    </button>
+                                  </Button>
+                                </form>
+                              </Form>
+                            </div>
+                          </Col>
+                        </div>
+                      </Row>
+                    </div>
+                  </Container>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
+      </Container>
+    </Login>
+  </Router>
+</BrowserRouter>
+`;

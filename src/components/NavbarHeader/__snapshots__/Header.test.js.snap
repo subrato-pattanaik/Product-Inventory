@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header Page Component should test snapshot of Header page 1`] = `
+<Navbar
+  bg="dark"
+  className="shadow"
+  collapseOnSelect={true}
+  expand="lg"
+  variant="dark"
+>
+  <NavbarBrand
+    className="navbrand"
+  >
+    <span
+      className="brandfont"
+    >
+      PI
+    </span>
+     Product Inventory
+  </NavbarBrand>
+  <NavbarToggle
+    aria-controls="responsive-navbar-nav"
+    label="Toggle navigation"
+  />
+  <NavbarCollapse
+    id="responsive-navbar-nav"
+  >
+    <Navlinks />
+    <Button
+      active={false}
+      disabled={false}
+      onClick={[Function]}
+      variant="outline-warning"
+    >
+      Log in
+    </Button>
+     
+    <Button
+      active={false}
+      disabled={false}
+      onClick={[Function]}
+      variant="outline-warning"
+    >
+      Sign up
+    </Button>
+  </NavbarCollapse>
+</Navbar>
+`;
