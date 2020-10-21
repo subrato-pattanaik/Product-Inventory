@@ -20,4 +20,8 @@ describe("About Page Testing", () => {
   it("should test image using property selector built-in component", () => {
     expect(wrapper.find('[alt="First slide"]').exists()).toEqual(true);
   });
+
+  it("should test image built-in component count", () => {
+    expect(wrapper.find("img")).toHaveLength(4);
+  });
 });

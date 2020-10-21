@@ -20,6 +20,7 @@
     "react-dom": "^16.13.1",
     "react-hook-form": "^6.9.0",
     "react-loading": "^2.0.3",
+    "react-router": "^5.2.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "yup": "^0.29.3"
@@ -53,7 +54,7 @@
   },
   "jest": {
     "snapshotSerializers": [
-        "enzyme-to-json/serializer"
+      "enzyme-to-json/serializer"
     ]
-}
+  }
 }

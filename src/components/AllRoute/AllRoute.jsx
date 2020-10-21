@@ -1,5 +1,5 @@
 import React, { Suspense, useState } from "react";
-import { Route, Switch, withRouter } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./AllRoute.css";
 import { UserContextAPI } from "../ContextAPI/UserContextAPI";
 
@@ -46,4 +46,4 @@ function AllRoute() {
   );
 }
 
-export default withRouter(AllRoute);
+export default AllRoute;

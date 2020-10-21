@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing of TopViewProduct Page should test snapshot of TopViewProduct page 1`] = `
+<div>
+  <h4>
+    Top 3 Products
+  </h4>
+  <hr
+    className="bg-warning mb-3"
+  />
+  <Doughnut
+    data={
+      Object {
+        "datasets": Array [
+          Object {
+            "backgroundColor": Array [
+              "#FF6384",
+              "#36A2EB",
+              "#FFCE56",
+            ],
+            "data": Array [
+              300,
+              50,
+              100,
+            ],
+            "hoverBackgroundColor": Array [
+              "#FF6384",
+              "#36A2EB",
+              "#FFCE56",
+            ],
+          },
+        ],
+        "labels": Array [
+          "Samsung Refigerator",
+          "Lenovo Desktop",
+          "Nikon Camera",
+        ],
+      }
+    }
+    height={20}
+    width={20}
+  />
+</div>
+`;

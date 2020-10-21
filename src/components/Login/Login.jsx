@@ -64,8 +64,8 @@ function Login() {
             <Col lg={6} md={6} xs={12} style={image}></Col>
             <Col lg={6} md={6} xs={12}>
               <Container className="d-flex login bg-light align-items-center">
-                <Row className="mx-auto">
-                  <Col md={12} xs={12}>
+                <Row className="mx-auto justify-content-center">
+                  <Col md={10} xs={10}>
                     {!!location?.state?.pass && (
                       <Alert variant="success">
                         <Alert.Heading>

@@ -1,9 +1,12 @@
-import React from 'react';
-import { render } from '@testing-library/react';
-import App from './App';
+import { shallow } from "enzyme";
+import React from "react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+it("should test snapshot of App page", () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper).toMatchSnapshot();
+});
+it("should test All Route component exist or not", () => {
+  const wrapper = shallow(<App />);
+  expect(wrapper.find("AllRoute").exists()).toEqual(true);
 });
