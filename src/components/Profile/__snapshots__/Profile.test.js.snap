@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Profile Page Component should test snapshot of Header page 1`] = `
+<BrowserRouter>
+  <Router
+    history={
+      Object {
+        "action": "PUSH",
+        "block": [Function],
+        "createHref": [Function],
+        "go": [Function],
+        "goBack": [Function],
+        "goForward": [Function],
+        "length": 2,
+        "listen": [Function],
+        "location": Object {
+          "hash": "",
+          "key": "7vic5p",
+          "pathname": "/Login",
+          "search": "",
+          "state": undefined,
+        },
+        "push": [Function],
+        "replace": [Function],
+      }
+    }
+  >
+    <Profile />
+  </Router>
+</BrowserRouter>
+`;

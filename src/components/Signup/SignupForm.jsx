@@ -124,7 +124,7 @@ function SignupForm() {
           <Form.Control
             className="rounded-pill"
             placeholder="Enter Location"
-            name="Location"
+            name="location"
             ref={register}
           />
         </Form.Group>

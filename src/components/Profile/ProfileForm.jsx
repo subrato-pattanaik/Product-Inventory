@@ -32,9 +32,7 @@ function ProfileForm() {
     <Form autoComplete="off">
       <Form.Row>
         <Form.Group as={Col} className="mr-4">
-          <Form.Label>
-            Email<span className="text-danger">*</span>
-          </Form.Label>
+          <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
             name="email"
@@ -49,9 +47,7 @@ function ProfileForm() {
         </Form.Group>
 
         <Form.Group as={Col}>
-          <Form.Label>
-            Password<span className="text-danger">*</span>
-          </Form.Label>
+          <Form.Label>Password</Form.Label>
           <Form.Control
             type="password"
             name="password"
@@ -67,9 +63,7 @@ function ProfileForm() {
       </Form.Row>
       <Form.Row>
         <Form.Group as={Col} className="mr-4">
-          <Form.Label>
-            First Name<span className="text-danger">*</span>
-          </Form.Label>
+          <Form.Label>First Name</Form.Label>
           <Form.Control name="firstname" ref={register} disabled="true" />
           {errors.firstname && (
             <div className="small lead text-danger  mb-2">
@@ -79,9 +73,7 @@ function ProfileForm() {
         </Form.Group>
 
         <Form.Group as={Col}>
-          <Form.Label>
-            Last Name<span className="text-danger">*</span>
-          </Form.Label>
+          <Form.Label>Last Name</Form.Label>
           <Form.Control name="lastname" ref={register} disabled="true" />
           {errors.lastname && (
             <div className="small lead text-danger  mb-2">
@@ -97,9 +89,7 @@ function ProfileForm() {
         </Form.Group>
 
         <Form.Group as={Col}>
-          <Form.Label>
-            Mobile No<span className="text-danger">*</span>
-          </Form.Label>
+          <Form.Label>Mobile No</Form.Label>
           <Form.Control name="mobileno" ref={register} disabled="true" />
           {errors.mobileno && (
             <div className="small lead text-danger  mb-2">

@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Sign up Page Component should test snapshot of Header page 1`] = `
+<Container
+  className="p-0"
+  fluid={true}
+>
+  <Row
+    noGutters={true}
+  >
+    <Col
+      lg={6}
+      md={6}
+      xs={12}
+    >
+      <Container
+        className="d-flex bg-light align-items-center"
+        fluid={false}
+        style={
+          Object {
+            "minHeight": "89vh",
+          }
+        }
+      >
+        <Row
+          className="mx-auto p-5"
+          noGutters={false}
+        >
+          <Col
+            md={12}
+            xs={12}
+          >
+            <h3
+              className="display-4 text-warning text-center font-weight-bold mt-n5 mb-2"
+            >
+              Sign Up
+            </h3>
+            <withRouter(SignupForm) />
+          </Col>
+        </Row>
+      </Container>
+    </Col>
+    <Col
+      lg={6}
+      md={6}
+      style={
+        Object {
+          "backgroundImage": "linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ),url(image2.jpg)",
+          "backgroundPosition": "center center",
+          "backgroundSize": "cover",
+          "minHeight": "89vh",
+        }
+      }
+      xs={12}
+    />
+  </Row>
+</Container>
+`;

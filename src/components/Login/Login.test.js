@@ -16,7 +16,6 @@ let mockResponse = {
       lastname: "pattanaik",
       location: "pune",
       mobileno: "2312312412",
-      select: false,
     },
     {
       id: 2,
@@ -26,7 +25,6 @@ let mockResponse = {
       lastname: "pattanaik",
       location: "pune",
       mobileno: "2312312412",
-      select: false,
     },
     {
       id: 3,
@@ -36,7 +34,6 @@ let mockResponse = {
       lastname: "punde",
       location: "pune",
       mobileno: "2312312412",
-      select: false,
     },
   ],
 };
@@ -63,7 +60,7 @@ describe("Login Page Component", () => {
   });
 });
 
-describe("App Component Mount Test ", () => {
+describe("Login Component Mount Test using Moxios", () => {
   let mountWrapper;
 
   beforeAll(() => {

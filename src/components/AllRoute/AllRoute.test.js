@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import About from "../About/About";
 import toJson from "enzyme-to-json";
 import AllRoute from "./AllRoute";
+
 let pathMap = [];
 describe("all the test of AllRoute page", () => {
   it("should test snapshot of AllRoute page", () => {
