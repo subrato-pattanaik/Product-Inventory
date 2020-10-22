@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should test snapshot of App page 1`] = `
+<BrowserRouter>
+  <AllRoute />
+</BrowserRouter>
+`;

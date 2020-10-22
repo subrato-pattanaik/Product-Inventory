@@ -6,7 +6,7 @@ import PI from "../../images/PI.jpg";
 import Viewproduct from "../../images/Viewproduct.jpg";
 function About() {
   return (
-    <Container fluid className="p-0" style={{ minHeight: "89vh !important" }}>
+    <Container fluid className="p-0" style={{ Height: "100vh !important" }}>
       <Carousel>
         <Carousel.Item>
           <img className="d-block w-100" src={PI} alt="First slide" />

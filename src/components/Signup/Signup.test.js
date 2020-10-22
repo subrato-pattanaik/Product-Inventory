@@ -3,7 +3,6 @@ import { shallow, mount } from "enzyme";
 import "mutationobserver-shim";
 import Signup from "./Signup";
 import { BrowserRouter } from "react-router-dom";
-import SignupForm from "./SignupForm";
 import { Form } from "react-bootstrap";
 
 describe("Sign up Page Component", () => {
