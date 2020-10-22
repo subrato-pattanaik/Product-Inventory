@@ -42,7 +42,7 @@ function EditProductForm() {
     axios.put(`http://localhost:4000/products/${pid}`, formData);
     setSureEdit(true);
     setIsDirty(false);
-    navigation.push({
+    navigation.replace({
       pathname: "/productList",
       state: { added: "pass" },
     });
