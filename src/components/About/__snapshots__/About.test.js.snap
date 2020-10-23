@@ -6,7 +6,7 @@ exports[`About Page Testing should test snapshot of About page 1`] = `
   fluid={true}
   style={
     Object {
-      "minHeight": "89vh !important",
+      "Height": "100vh !important",
     }
   }
 >

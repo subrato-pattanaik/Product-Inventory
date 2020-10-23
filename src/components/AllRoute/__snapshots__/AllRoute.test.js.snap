@@ -44,7 +44,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/topViewProduct"
         />
         <Route
@@ -56,7 +55,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/productList"
         />
         <Route
@@ -68,7 +66,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/addProduct"
         />
         <Route
@@ -80,7 +77,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/Login"
         />
         <Route
@@ -92,7 +88,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/Signup"
         />
         <Route
@@ -104,7 +99,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/Profile"
         />
         <Route
@@ -116,7 +110,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/editProduct"
         />
         <Route
@@ -128,7 +121,6 @@ exports[`all the test of AllRoute page should test snapshot of AllRoute page 1`]
               "_status": -1,
             }
           }
-          exact={true}
           path="/viewProduct"
         />
       </Switch>

@@ -5,18 +5,17 @@ exports[`Profile Page Component should test snapshot of Header page 1`] = `
   <Router
     history={
       Object {
-        "action": "PUSH",
+        "action": "POP",
         "block": [Function],
         "createHref": [Function],
         "go": [Function],
         "goBack": [Function],
         "goForward": [Function],
-        "length": 2,
+        "length": 1,
         "listen": [Function],
         "location": Object {
           "hash": "",
-          "key": "7vic5p",
-          "pathname": "/Login",
+          "pathname": "/",
           "search": "",
           "state": undefined,
         },
@@ -25,7 +24,396 @@ exports[`Profile Page Component should test snapshot of Header page 1`] = `
       }
     }
   >
-    <Profile />
+    <Profile>
+      <Container
+        className="p-0"
+        fluid={true}
+        style={
+          Object {
+            "background": "#454441",
+            "minHeight": "89.1vh",
+          }
+        }
+      >
+        <div
+          className="p-0 container-fluid"
+          style={
+            Object {
+              "background": "#454441",
+              "minHeight": "89.1vh",
+            }
+          }
+        >
+          <Row
+            noGutters={true}
+          >
+            <div
+              className="row no-gutters"
+            >
+              <Col>
+                <div
+                  className="col"
+                >
+                  <Container
+                    className="bg-light my-5"
+                    fluid={false}
+                  >
+                    <div
+                      className="bg-light my-5 container"
+                    >
+                      <Row
+                        className="mx-auto"
+                        noGutters={false}
+                      >
+                        <div
+                          className="mx-auto row"
+                        >
+                          <Col>
+                            <div
+                              className="col"
+                            >
+                              <Row
+                                noGutters={false}
+                              >
+                                <div
+                                  className="row"
+                                >
+                                  <Col>
+                                    <div
+                                      className="col"
+                                    >
+                                      <h1
+                                        className="display-5  px-4 py-2 text-warning text-left font-weight-bold"
+                                      >
+                                        View your Profile
+                                      </h1>
+                                    </div>
+                                  </Col>
+                                </div>
+                              </Row>
+                              <div
+                                className="text-muted border border-warning rounded p-5 mb-5 mx-3"
+                              >
+                                <withRouter(ProfileForm)>
+                                  <ProfileForm
+                                    history={
+                                      Object {
+                                        "action": "POP",
+                                        "block": [Function],
+                                        "createHref": [Function],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "length": 1,
+                                        "listen": [Function],
+                                        "location": Object {
+                                          "hash": "",
+                                          "pathname": "/",
+                                          "search": "",
+                                          "state": undefined,
+                                        },
+                                        "push": [Function],
+                                        "replace": [Function],
+                                      }
+                                    }
+                                    location={
+                                      Object {
+                                        "hash": "",
+                                        "pathname": "/",
+                                        "search": "",
+                                        "state": undefined,
+                                      }
+                                    }
+                                    match={
+                                      Object {
+                                        "isExact": true,
+                                        "params": Object {},
+                                        "path": "/",
+                                        "url": "/",
+                                      }
+                                    }
+                                  >
+                                    <Form
+                                      autoComplete="off"
+                                      inline={false}
+                                    >
+                                      <form
+                                        autoComplete="off"
+                                        className=""
+                                      >
+                                        <FormRow>
+                                          <div
+                                            className="form-row"
+                                          >
+                                            <FormGroup
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Col",
+                                                  "render": [Function],
+                                                }
+                                              }
+                                              className="mr-4"
+                                            >
+                                              <Col
+                                                className="mr-4 form-group"
+                                              >
+                                                <div
+                                                  className="mr-4 form-group col"
+                                                >
+                                                  <FormLabel
+                                                    column={false}
+                                                    srOnly={false}
+                                                  >
+                                                    <label
+                                                      className="form-label"
+                                                    >
+                                                      Email
+                                                    </label>
+                                                  </FormLabel>
+                                                  <FormControl
+                                                    disabled={true}
+                                                    name="email"
+                                                    type="email"
+                                                  >
+                                                    <input
+                                                      className="form-control"
+                                                      disabled={true}
+                                                      name="email"
+                                                      type="email"
+                                                    />
+                                                  </FormControl>
+                                                </div>
+                                              </Col>
+                                            </FormGroup>
+                                            <FormGroup
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Col",
+                                                  "render": [Function],
+                                                }
+                                              }
+                                            >
+                                              <Col
+                                                className="form-group"
+                                              >
+                                                <div
+                                                  className="form-group col"
+                                                >
+                                                  <FormLabel
+                                                    column={false}
+                                                    srOnly={false}
+                                                  >
+                                                    <label
+                                                      className="form-label"
+                                                    >
+                                                      Password
+                                                    </label>
+                                                  </FormLabel>
+                                                  <FormControl
+                                                    disabled={true}
+                                                    name="password"
+                                                    type="password"
+                                                  >
+                                                    <input
+                                                      className="form-control"
+                                                      disabled={true}
+                                                      name="password"
+                                                      type="password"
+                                                    />
+                                                  </FormControl>
+                                                </div>
+                                              </Col>
+                                            </FormGroup>
+                                          </div>
+                                        </FormRow>
+                                        <FormRow>
+                                          <div
+                                            className="form-row"
+                                          >
+                                            <FormGroup
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Col",
+                                                  "render": [Function],
+                                                }
+                                              }
+                                              className="mr-4"
+                                            >
+                                              <Col
+                                                className="mr-4 form-group"
+                                              >
+                                                <div
+                                                  className="mr-4 form-group col"
+                                                >
+                                                  <FormLabel
+                                                    column={false}
+                                                    srOnly={false}
+                                                  >
+                                                    <label
+                                                      className="form-label"
+                                                    >
+                                                      First Name
+                                                    </label>
+                                                  </FormLabel>
+                                                  <FormControl
+                                                    disabled="true"
+                                                    name="firstname"
+                                                  >
+                                                    <input
+                                                      className="form-control"
+                                                      disabled="true"
+                                                      name="firstname"
+                                                    />
+                                                  </FormControl>
+                                                </div>
+                                              </Col>
+                                            </FormGroup>
+                                            <FormGroup
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Col",
+                                                  "render": [Function],
+                                                }
+                                              }
+                                            >
+                                              <Col
+                                                className="form-group"
+                                              >
+                                                <div
+                                                  className="form-group col"
+                                                >
+                                                  <FormLabel
+                                                    column={false}
+                                                    srOnly={false}
+                                                  >
+                                                    <label
+                                                      className="form-label"
+                                                    >
+                                                      Last Name
+                                                    </label>
+                                                  </FormLabel>
+                                                  <FormControl
+                                                    disabled={true}
+                                                    name="lastname"
+                                                  >
+                                                    <input
+                                                      className="form-control"
+                                                      disabled={true}
+                                                      name="lastname"
+                                                    />
+                                                  </FormControl>
+                                                </div>
+                                              </Col>
+                                            </FormGroup>
+                                          </div>
+                                        </FormRow>
+                                        <FormRow
+                                          className="mb-3"
+                                        >
+                                          <div
+                                            className="mb-3 form-row"
+                                          >
+                                            <FormGroup
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Col",
+                                                  "render": [Function],
+                                                }
+                                              }
+                                              className="mr-4"
+                                            >
+                                              <Col
+                                                className="mr-4 form-group"
+                                              >
+                                                <div
+                                                  className="mr-4 form-group col"
+                                                >
+                                                  <FormLabel
+                                                    column={false}
+                                                    srOnly={false}
+                                                  >
+                                                    <label
+                                                      className="form-label"
+                                                    >
+                                                      Location
+                                                    </label>
+                                                  </FormLabel>
+                                                  <FormControl
+                                                    disabled={true}
+                                                    name="location"
+                                                  >
+                                                    <input
+                                                      className="form-control"
+                                                      disabled={true}
+                                                      name="location"
+                                                    />
+                                                  </FormControl>
+                                                </div>
+                                              </Col>
+                                            </FormGroup>
+                                            <FormGroup
+                                              as={
+                                                Object {
+                                                  "$$typeof": Symbol(react.forward_ref),
+                                                  "displayName": "Col",
+                                                  "render": [Function],
+                                                }
+                                              }
+                                            >
+                                              <Col
+                                                className="form-group"
+                                              >
+                                                <div
+                                                  className="form-group col"
+                                                >
+                                                  <FormLabel
+                                                    column={false}
+                                                    srOnly={false}
+                                                  >
+                                                    <label
+                                                      className="form-label"
+                                                    >
+                                                      Mobile No
+                                                    </label>
+                                                  </FormLabel>
+                                                  <FormControl
+                                                    disabled={true}
+                                                    name="mobileno"
+                                                  >
+                                                    <input
+                                                      className="form-control"
+                                                      disabled={true}
+                                                      name="mobileno"
+                                                    />
+                                                  </FormControl>
+                                                </div>
+                                              </Col>
+                                            </FormGroup>
+                                          </div>
+                                        </FormRow>
+                                      </form>
+                                    </Form>
+                                  </ProfileForm>
+                                </withRouter(ProfileForm)>
+                              </div>
+                            </div>
+                          </Col>
+                        </div>
+                      </Row>
+                    </div>
+                  </Container>
+                </div>
+              </Col>
+            </div>
+          </Row>
+        </div>
+      </Container>
+    </Profile>
   </Router>
 </BrowserRouter>
 `;

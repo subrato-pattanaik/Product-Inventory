@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App Component Mount Test  renders correctly 1`] = `
+exports[`Login Component Mount Test using Moxios renders correctly 1`] = `
 <BrowserRouter>
   <Router
     history={

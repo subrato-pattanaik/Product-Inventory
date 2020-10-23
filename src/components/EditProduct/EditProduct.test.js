@@ -22,10 +22,6 @@ describe("Edit Page Component", () => {
     );
   });
 
-  it("should render Edit Product component", () => {
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it("should render About Edit Product component", () => {
     expect(wrapper.find("AboutEditProduct").exists()).toEqual(true);
   });

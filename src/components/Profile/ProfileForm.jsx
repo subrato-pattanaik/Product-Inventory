@@ -37,7 +37,7 @@ function ProfileForm() {
             type="email"
             name="email"
             ref={register}
-            disabled="true"
+            disabled={true}
           />
           {errors.email && (
             <div className="small lead text-danger mb-2">
@@ -52,7 +52,7 @@ function ProfileForm() {
             type="password"
             name="password"
             ref={register}
-            disabled="true"
+            disabled={true}
           />
           {errors.password && (
             <div className="small lead text-danger  mb-2">
@@ -74,7 +74,7 @@ function ProfileForm() {
 
         <Form.Group as={Col}>
           <Form.Label>Last Name</Form.Label>
-          <Form.Control name="lastname" ref={register} disabled="true" />
+          <Form.Control name="lastname" ref={register} disabled={true} />
           {errors.lastname && (
             <div className="small lead text-danger  mb-2">
               {errors.lastname.message}
@@ -85,12 +85,12 @@ function ProfileForm() {
       <Form.Row className="mb-3">
         <Form.Group as={Col} className="mr-4">
           <Form.Label>Location</Form.Label>
-          <Form.Control name="location" ref={register} disabled="true" />
+          <Form.Control name="location" ref={register} disabled={true} />
         </Form.Group>
 
         <Form.Group as={Col}>
           <Form.Label>Mobile No</Form.Label>
-          <Form.Control name="mobileno" ref={register} disabled="true" />
+          <Form.Control name="mobileno" ref={register} disabled={true} />
           {errors.mobileno && (
             <div className="small lead text-danger  mb-2">
               {errors.mobileno.message}
