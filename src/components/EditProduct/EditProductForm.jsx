@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { withRouter, useHistory, useLocation, Prompt } from "react-router-dom";
 import { useForm } from "react-hook-form";
-
+import * as yup from "yup";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { Col, Button, Form } from "react-bootstrap";
 
 import axios from "axios";
@@ -10,7 +11,7 @@ function EditProductForm() {
   let location = useLocation();
   const { pid } = location.state;
   const [sureEdit, setSureEdit] = useState(false);
-  const [validated, setValidated] = useState(false);
+
   const [isDirty, setIsDirty] = useState(false);
   const [editUser, setEditUser] = useState({
     id: 0,
@@ -21,8 +22,25 @@ function EditProductForm() {
     quantiy: "",
     select: false,
   });
+  const schema = yup.object().shape({
+    productName: yup.string().required("*Product Name is mandatory"),
 
-  const { register, handleSubmit, reset } = useForm({
+    productDesc: yup.string().required("*Product Description is mandatory"),
+    manufacturer: yup.string().required("*Manufacturer details is mandatory"),
+    price: yup
+      .string()
+      .required("*price is mandatory")
+      .matches(/^[0-9]*$/, "Enter Number only")
+      .max(6, "We dont have product which exceeds 10 lakh"),
+    quantity: yup
+      .string()
+      .required("Quantity is mandatory")
+      .matches(/^[0-9]*$/, "Enter Number only")
+      .max(4, "We dont take product more than 9999"),
+  });
+
+  const { register, handleSubmit, errors, reset } = useForm({
+    resolver: yupResolver(schema),
     defaultValues: editUser,
   });
 
@@ -40,32 +58,31 @@ function EditProductForm() {
   const onSubmit = (formData) => {
     formData.select = false;
     axios.put(`http://localhost:4000/products/${pid}`, formData);
-    setSureEdit(true);
     setIsDirty(false);
-    navigation.replace({
+    setSureEdit(true);
+    navigation.push({
       pathname: "/productList",
       state: { added: "pass" },
     });
-
-    setValidated(true);
   };
 
   return (
     <>
-      <Form noValidate validated={validated} onSubmit={handleSubmit(onSubmit)}>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Form.Row>
           <Form.Group as={Col} className="mr-5">
             <Form.Label column>Product Name</Form.Label>
             <Form.Control
               name="productName"
               placeholder="Enter product Name"
-              required
               onChange={() => setIsDirty(true)}
               ref={register}
             />
-            <Form.Control.Feedback type="invalid">
-              Please enter valid product name
-            </Form.Control.Feedback>
+            {errors.productName && (
+              <div className="small lead text-danger mb-2">
+                {errors.productName.message}
+              </div>
+            )}
           </Form.Group>
 
           <Form.Group as={Col}>
@@ -73,13 +90,14 @@ function EditProductForm() {
             <Form.Control
               name="productDesc"
               placeholder="Enter product description"
-              required
               onChange={() => setIsDirty(true)}
               ref={register}
             />
-            <Form.Control.Feedback type="invalid">
-              Please enter valid product description
-            </Form.Control.Feedback>
+            {errors.productDesc && (
+              <div className="small lead text-danger mb-2">
+                {errors.productDesc.message}
+              </div>
+            )}
           </Form.Group>
         </Form.Row>
 
@@ -89,28 +107,29 @@ function EditProductForm() {
             <Form.Control
               name="manufacturer"
               placeholder="Enter Manufacturer"
-              required
               onChange={() => setIsDirty(true)}
               ref={register}
             />
-            <Form.Control.Feedback type="invalid">
-              Please enter valid manufacturer
-            </Form.Control.Feedback>
+            {errors.manufacturer && (
+              <div className="small lead text-danger mb-2">
+                {errors.manufacturer.message}
+              </div>
+            )}
           </Form.Group>
 
           <Form.Group as={Col} controlId="formBasicPrice">
             <Form.Label column>Price</Form.Label>
             <Form.Control
-              type="number"
               name="price"
               placeholder="Enter Price"
-              required
               onChange={() => setIsDirty(true)}
               ref={register}
             />
-            <Form.Control.Feedback type="invalid">
-              Please enter valid Price
-            </Form.Control.Feedback>
+            {errors.price && (
+              <div className="small lead text-danger mb-2">
+                {errors.price.message}
+              </div>
+            )}
           </Form.Group>
         </Form.Row>
 
@@ -118,18 +137,16 @@ function EditProductForm() {
           <Form.Group as={Col}>
             <Form.Label column>Quantity</Form.Label>
             <Form.Control
-              type="number"
               name="quantity"
               placeholder="Enter Quantity"
-              required
               onChange={() => setIsDirty(true)}
               ref={register}
-              max="100"
             />
-            <Form.Control.Feedback type="invalid">
-              Please Quantity in number format and quanitity should be less than
-              100
-            </Form.Control.Feedback>
+            {errors.quantity && (
+              <div className="small lead text-danger mb-2">
+                {errors.quantity.message}
+              </div>
+            )}
           </Form.Group>
         </Form.Row>
         <div className="d-flex justify-content-end">

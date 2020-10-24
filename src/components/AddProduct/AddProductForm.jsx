@@ -110,7 +110,7 @@ function AddProductForm() {
               required
               onChange={() => setIsDirty(true)}
               ref={register}
-              max="100"
+              max="10000"
             />
             <Form.Control.Feedback type="invalid">
               Please Quantity in number format and quanitity should be less than

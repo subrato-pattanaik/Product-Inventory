@@ -295,10 +295,10 @@ exports[`Product List Component Mount Test  Product list renders correctly using
                                   setAllSelected={[Function]}
                                 >
                                   <Container
-                                    fluid={false}
+                                    fluid={true}
                                   >
                                     <div
-                                      className="container"
+                                      className="container-fluid"
                                     >
                                       <Row
                                         noGutters={false}
@@ -312,74 +312,159 @@ exports[`Product List Component Mount Test  Product list renders correctly using
                                             <div
                                               className="mb-3 col"
                                             >
-                                              <Button
-                                                active={false}
-                                                className="btn-sm mr-4"
-                                                disabled={false}
-                                                onClick={[Function]}
-                                                variant="danger"
+                                              <Container
+                                                fluid={true}
                                               >
-                                                <button
-                                                  className="btn-sm mr-4 btn btn-danger"
-                                                  disabled={false}
-                                                  onClick={[Function]}
-                                                  type="button"
+                                                <div
+                                                  className="container-fluid"
                                                 >
-                                                  Delete
-                                                </button>
-                                              </Button>
-                                              <input
-                                                className="mr-2"
-                                                defaultChecked={true}
-                                                id="prodDesc"
-                                                onChange={[Function]}
-                                                type="checkbox"
-                                              />
-                                              <label
-                                                className="mr-5"
-                                                htmlFor="prodDesc"
-                                              >
-                                                Product Description
-                                              </label>
-                                              <input
-                                                className="mr-2"
-                                                defaultChecked={true}
-                                                id="manufacturer"
-                                                onChange={[Function]}
-                                                type="checkbox"
-                                              />
-                                              <label
-                                                className="mr-5"
-                                                htmlFor="manufacturer"
-                                              >
-                                                Manufacturer
-                                              </label>
-                                              <input
-                                                className="mr-2"
-                                                defaultChecked={true}
-                                                id="price"
-                                                onChange={[Function]}
-                                                type="checkbox"
-                                              />
-                                              <label
-                                                className="mr-5"
-                                                htmlFor="price"
-                                              >
-                                                Price
-                                              </label>
-                                              <input
-                                                className="mr-2"
-                                                defaultChecked={true}
-                                                id="quantity"
-                                                onChange={[Function]}
-                                                type="checkbox"
-                                              />
-                                              <label
-                                                className=" mr-5"
-                                                htmlFor="quantity"
-                                              >
-                                                Quantity
-                                              </label>
+                                                  <Row
+                                                    noGutters={false}
+                                                    nogutters={true}
+                                                  >
+                                                    <div
+                                                      className="row"
+                                                      nogutters={true}
+                                                    >
+                                                      <Col
+                                                        md={1}
+                                                      >
+                                                        <div
+                                                          className="col-md-1"
+                                                        >
+                                                          <Button
+                                                            active={false}
+                                                            className="btn-sm"
+                                                            disabled={false}
+                                                            onClick={[Function]}
+                                                            variant="danger"
+                                                          >
+                                                            <button
+                                                              className="btn-sm btn btn-danger"
+                                                              disabled={false}
+                                                              onClick={[Function]}
+                                                              type="button"
+                                                            >
+                                                              Delete
+                                                            </button>
+                                                          </Button>
+                                                        </div>
+                                                      </Col>
+                                                      <Col
+                                                        md={2}
+                                                      >
+                                                        <div
+                                                          className="col-md-2"
+                                                        >
+                                                          <input
+                                                            defaultChecked={true}
+                                                            id="prodDesc"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                          />
+                                                          <label
+                                                            className="small ml-1"
+                                                            htmlFor="prodDesc"
+                                                          >
+                                                            Description
+                                                          </label>
+                                                        </div>
+                                                      </Col>
+                                                      <Col
+                                                        md={2}
+                                                      >
+                                                        <div
+                                                          className="col-md-2"
+                                                        >
+                                                          <input
+                                                            defaultChecked={true}
+                                                            id="manufacturer"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                          />
+                                                          <label
+                                                            className="small ml-1"
+                                                            htmlFor="manufacturer"
+                                                          >
+                                                            Manufacturer
+                                                          </label>
+                                                        </div>
+                                                      </Col>
+                                                      <Col
+                                                        md={1}
+                                                      >
+                                                        <div
+                                                          className="col-md-1"
+                                                        >
+                                                          <input
+                                                            defaultChecked={true}
+                                                            id="price"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                          />
+                                                          <label
+                                                            className="small"
+                                                            htmlFor="price"
+                                                          >
+                                                            Price
+                                                          </label>
+                                                        </div>
+                                                      </Col>
+                                                      <Col
+                                                        md={2}
+                                                      >
+                                                        <div
+                                                          className="col-md-2"
+                                                        >
+                                                          <input
+                                                            defaultChecked={true}
+                                                            id="quantity"
+                                                            onChange={[Function]}
+                                                            type="checkbox"
+                                                          />
+                                                          <label
+                                                            className="small ml-1"
+                                                            htmlFor="quantity"
+                                                          >
+                                                            Quantity
+                                                          </label>
+                                                        </div>
+                                                      </Col>
+                                                      <Col
+                                                        md={4}
+                                                      >
+                                                        <div
+                                                          className="col-md-4"
+                                                        >
+                                                          <InputGroup
+                                                            size="sm"
+                                                          >
+                                                            <div
+                                                              className="input-group input-group-sm"
+                                                            >
+                                                              <FormControl
+                                                                aria-describedby="basic-addon2"
+                                                                aria-label="Product Name"
+                                                                className="input-sm border-warning"
+                                                                onChange={[Function]}
+                                                                placeholder="Product Name"
+                                                              >
+                                                                <input
+                                                                  aria-describedby="basic-addon2"
+                                                                  aria-label="Product Name"
+                                                                  className="input-sm border-warning form-control"
+                                                                  onChange={[Function]}
+                                                                  placeholder="Product Name"
+                                                                />
+                                                              </FormControl>
+                                                            </div>
+                                                          </InputGroup>
+                                                        </div>
+                                                      </Col>
+                                                    </div>
+                                                  </Row>
+                                                </div>
+                                              </Container>
                                             </div>
                                           </Col>
                                         </div>

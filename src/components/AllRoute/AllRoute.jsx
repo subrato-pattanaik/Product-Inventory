@@ -8,9 +8,6 @@ const Header = React.lazy(() => import("../NavbarHeader/Header"));
 const About = React.lazy(() => import("../About/About"));
 const ProductList = React.lazy(() => import("../ProductList/ProductList"));
 const AddProduct = React.lazy(() => import("../AddProduct/AddProduct"));
-const TopViewProduct = React.lazy(() =>
-  import("../TopViewProduct/TopViewProduct")
-);
 const Signup = React.lazy(() => import("../Signup/Signup"));
 const Profile = React.lazy(() => import("../Profile/Profile"));
 const EditProduct = React.lazy(() => import("../EditProduct/EditProduct"));
@@ -31,7 +28,6 @@ function AllRoute() {
           <Header />
           <Switch>
             <Route exact path="/" component={About} />
-            <Route path="/topViewProduct" component={TopViewProduct} />
             <Route path="/productList" component={ProductList} />
             <Route path="/addProduct" component={AddProduct} />
             <Route path="/Login" component={Login} />

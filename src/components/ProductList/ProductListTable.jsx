@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Container, Table, Row, Col, Button } from "react-bootstrap";
+import {
+  Container,
+  Table,
+  Row,
+  Col,
+  Button,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
 
 import axios from "axios";
 import { Link, withRouter, useHistory } from "react-router-dom";
@@ -13,6 +21,8 @@ function ProductListTable({ allSelected, setAllSelected }) {
   const [prChecked, setprChecked] = useState(true);
   const [qtyChecked, setqtyChecked] = useState(true);
   const [products, setProducts] = useState([]);
+  const [search, setSearch] = useState("");
+
   const { user } = useContext(UserContextAPI);
   useEffect(() => {
     async function fetchData() {
@@ -54,56 +64,74 @@ function ProductListTable({ allSelected, setAllSelected }) {
   // const navigation = useHistory();
 
   return (
-    <Container>
+    <Container fluid>
       <Row>
         <Col className="mb-3">
-          <Button variant="danger" className="btn-sm mr-4" onClick={onDelete}>
-            Delete
-          </Button>
+          <Container fluid>
+            <Row nogutters>
+              <Col md={1}>
+                <Button variant="danger" className="btn-sm" onClick={onDelete}>
+                  Delete
+                </Button>
+              </Col>
+              <Col md={2}>
+                <input
+                  type="checkbox"
+                  id="prodDesc"
+                  defaultChecked={descChecked}
+                  onChange={() => setdescChecked((prev) => !prev)}
+                />
+                <label className="small ml-1" htmlFor="prodDesc">
+                  Description
+                </label>
+              </Col>
+              <Col md={2}>
+                <input
+                  type="checkbox"
+                  id="manufacturer"
+                  defaultChecked={manChecked}
+                  onChange={() => setmanChecked((prev) => !prev)}
+                />
+                <label className="small ml-1" htmlFor="manufacturer">
+                  Manufacturer
+                </label>
+              </Col>
+              <Col md={1}>
+                <input
+                  type="checkbox"
+                  id="price"
+                  defaultChecked={prChecked}
+                  onChange={() => setprChecked((prev) => !prev)}
+                />
+                <label className="small" htmlFor="price">
+                  Price
+                </label>
+              </Col>
+              <Col md={2}>
+                <input
+                  type="checkbox"
+                  id="quantity"
+                  defaultChecked={qtyChecked}
+                  onChange={() => setqtyChecked((prev) => !prev)}
+                />
+                <label className="small ml-1" htmlFor="quantity">
+                  Quantity
+                </label>
+              </Col>
 
-          <input
-            type="checkbox"
-            id="prodDesc"
-            defaultChecked={descChecked}
-            onChange={() => setdescChecked((prev) => !prev)}
-            className="mr-2"
-          />
-          <label className="mr-5" htmlFor="prodDesc">
-            Product Description
-          </label>
-
-          <input
-            type="checkbox"
-            id="manufacturer"
-            defaultChecked={manChecked}
-            onChange={() => setmanChecked((prev) => !prev)}
-            className="mr-2"
-          />
-          <label className="mr-5" htmlFor="manufacturer">
-            Manufacturer
-          </label>
-
-          <input
-            type="checkbox"
-            id="price"
-            defaultChecked={prChecked}
-            onChange={() => setprChecked((prev) => !prev)}
-            className="mr-2"
-          />
-          <label className="mr-5" htmlFor="price">
-            Price
-          </label>
-
-          <input
-            type="checkbox"
-            id="quantity"
-            defaultChecked={qtyChecked}
-            onChange={() => setqtyChecked((prev) => !prev)}
-            className="mr-2"
-          />
-          <label className=" mr-5" htmlFor="quantity">
-            Quantity
-          </label>
+              <Col md={4}>
+                <InputGroup size="sm">
+                  <FormControl
+                    className="input-sm border-warning"
+                    placeholder="Product Name"
+                    aria-label="Product Name"
+                    aria-describedby="basic-addon2"
+                    onChange={(e) => setSearch(e.target.value)}
+                  />
+                </InputGroup>
+              </Col>
+            </Row>
+          </Container>
         </Col>
       </Row>
       <Row>
@@ -144,52 +172,63 @@ function ProductListTable({ allSelected, setAllSelected }) {
               </tr>
             </thead>
             <tbody>
-              {products.map((product) => (
-                <tr key={product.id}>
-                  <td>
-                    <input
-                      type="checkbox"
-                      checked={product.select}
-                      className="mr-2"
-                      onChange={(event) => {
-                        let value = event.target.checked;
-                        setProducts(
-                          products.map((prod) => {
-                            if (prod.id === product.id) prod.select = value;
-                            return prod;
-                          })
-                        );
-                      }}
-                    />
-                  </td>
-                  {nameChecked && (
+              {products
+                .filter((product) => {
+                  if (search === "") return product;
+                  else if (
+                    product.productName
+                      .toLowerCase()
+                      .includes(search.toLowerCase())
+                  )
+                    return product;
+                  else return null;
+                })
+                .map((product) => (
+                  <tr key={product.id}>
+                    <td>
+                      <input
+                        type="checkbox"
+                        checked={product.select}
+                        className="mr-2"
+                        onChange={(event) => {
+                          let value = event.target.checked;
+                          setProducts(
+                            products.map((prod) => {
+                              if (prod.id === product.id) prod.select = value;
+                              return prod;
+                            })
+                          );
+                        }}
+                      />
+                    </td>
+                    {nameChecked && (
+                      <td>
+                        <Link
+                          to={{
+                            pathname: "/viewProduct",
+                            state: { pid: product.id },
+                          }}
+                        >
+                          {product.productName}
+                        </Link>
+                      </td>
+                    )}
+                    {descChecked && <td>{product.productDesc}</td>}
+                    {manChecked && <td>{product.manufacturer}</td>}
+                    {prChecked && <td>{product.price}</td>}
+                    {qtyChecked && <td>{product.quantity}</td>}
                     <td>
                       <Link
                         to={{
-                          pathname: "/viewProduct",
+                          pathname: "/editProduct",
                           state: { pid: product.id },
                         }}
                       >
-                        {product.productName}
+                        <Button variant="success">Edit</Button>
                       </Link>
                     </td>
-                  )}
-                  {descChecked && <td>{product.productDesc}</td>}
-                  {manChecked && <td>{product.manufacturer}</td>}
-                  {prChecked && <td>{product.price}</td>}
-                  {qtyChecked && <td>{product.quantity}</td>}
-                  <td>
-                    <Link
-                      to={{
-                        pathname: "/editProduct",
-                        state: { pid: product.id },
-                      }}
-                    >
-                      <Button variant="success">Edit</Button>
-                    </Link>
-                  </td>
-                </tr>
-              ))}
+                  </tr>
+                ))}
             </tbody>
           </Table>
         </Col>
